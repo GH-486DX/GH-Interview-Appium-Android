@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -19,11 +20,12 @@ public class HelperClass {
         // Start Appium Server
         server = AppiumDriverLocalService.buildDefaultService();
         server.start();
+        server.clearOutPutStreams();
 
         // Start Android Driver
         String workingDirectory = (System.getProperty("user.dir"));
         UiAutomator2Options options = new UiAutomator2Options()
-                .setApp(workingDirectory + "//myapp.apk");
+                .setApp(workingDirectory + File.separator + "myapp.apk");
         androidDriver = new AndroidDriver(
                 new URL("http://127.0.0.1:4723"), options // Default local address for Appium 2.X
         );

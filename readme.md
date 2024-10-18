@@ -1,6 +1,6 @@
 ## GH Interview Appium Android example
 
-https://github.com
+https://github.com/GH-486DX/GH-Interview-Appium-Android
 
 ### Intro
 
@@ -10,7 +10,19 @@ Example of using Java, UiAutomator2, appium-java-client, Appium 2.X and Maven to
 
 It uses Page Object Model for locators, and Cucumber with TestNG for BDD test syntax. It also starts the Appium Server locally during test initialisation.
 
-[Appium Inspector](https://github.com/appium/appium-inspector) was used to inspect the application's elements.
+The Cucumber test Features are located in: `src/test/resources/features`
+
+[Appium Inspector](https://github.com/appium/appium-inspector) was used to inspect the application's elements. Example capabilities:
+
+```
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2",
+  "appium:platformVersion": "15",
+  "appium:deviceName": "Medium Phone API 35",
+  "appium:app": "<full-path-to-myapp.apk>"
+}
+```
 
 ### Requirements & setup:
 
@@ -27,5 +39,7 @@ Below should be working on your machine:
 
 ### Running the tests:
 
-1. Launch an emulated Android device via Android Studio (default device should be sufficient)
+(Appium Server should be launched by the test framework automatically)
+
+1. Launch an [emulated Android device via Android Studio](https://developer.android.com/studio/run/managing-avds) (default device should be sufficient).
 2. Launch tests: `mvn test`

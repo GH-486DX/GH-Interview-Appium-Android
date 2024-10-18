@@ -6,5 +6,4 @@ Feature: Verify Animations in the Test App
   Scenario: Check that buttons can be added
     When User clicks the Default Layout Animations CTA
     Then User can see the Default Layout Animations screen
-    And User is able to click the Add Button CTA
-    Then A new Button appears
+    And User can add four additional buttons

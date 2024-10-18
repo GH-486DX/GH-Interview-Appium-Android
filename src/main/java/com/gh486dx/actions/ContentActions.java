@@ -33,9 +33,14 @@ public class ContentActions {
         return contentLocators.readAssetPageTitle.isDisplayed();
     }
 
-    // Verify raw test asset appears
+    // Verify raw text asset appears
     public boolean getRawText() {
         return contentLocators.rawTextAsset.isDisplayed();
+    }
+
+    // Return raw text value
+    public String getRawTextValue() {
+        return contentLocators.rawTextAsset.getText();
     }
 
     // Click Resources CTA
@@ -56,6 +61,11 @@ public class ContentActions {
     // Verify Styled Text appears
     public boolean getStyledText() {
         return contentLocators.styledText.isDisplayed();
+    }
+
+    // Return Styled Text value
+    public String getStyledTextValue() {
+        return contentLocators.styledText.getText();
     }
 
 }

@@ -29,13 +29,14 @@ public class AnimationActions {
     }
 
     // Click Add Button CTA
-    public void clickAddButtonCTA() {
+    public void clickAddButtonCTA() throws InterruptedException {
         animationLocators.addButtonCTA.click();
+        Thread.sleep(500);
     }
 
     // Verify new button appears
-    public boolean getNewButton() {
-        return animationLocators.addedButton.isDisplayed();
+    public boolean getFourthButton() {
+        return animationLocators.fourthAddedButton.isDisplayed();
     }
 
 }

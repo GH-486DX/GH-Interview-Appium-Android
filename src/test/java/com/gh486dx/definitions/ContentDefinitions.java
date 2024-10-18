@@ -31,9 +31,14 @@ public class ContentDefinitions {
         Assert.assertTrue(objContent.getReadAssetPageTitle());
     }
 
-    @And("User can see the raw test asset")
-    public void userCanSeeTheRawTestAsset() {
+    @And("User can see the raw text asset")
+    public void userCanSeeTheRawTextAsset() {
         Assert.assertTrue(objContent.getRawText());
+    }
+
+    @And("the raw text asset contains {string}")
+    public void userValidatesRawText(String expectedText) {
+        Assert.assertTrue(objContent.getRawTextValue().contains(expectedText));
     }
 
     @When("User clicks the Resources CTA")
@@ -55,4 +60,10 @@ public class ContentDefinitions {
     public void userCanSeeTheStyledText() {
         Assert.assertTrue(objContent.getStyledText());
     }
+
+    @And("the styled text contains {string}")
+    public void userValidatesStyledText(String expectedText) {
+        Assert.assertTrue(objContent.getStyledTextValue().contains(expectedText));
+    }
+
 }

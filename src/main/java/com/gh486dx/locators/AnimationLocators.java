@@ -17,6 +17,7 @@ public class AnimationLocators {
     @FindBy(xpath = "//android.widget.Button[@content-desc=\"Add Button\"]")
     public WebElement addButtonCTA;
 
-    @FindBy(xpath = "//android.widget.Button[@text=\"1\"]")
-    public WebElement addedButton;
+    @FindBy(xpath = "//android.widget.Button[@text=\"4\"]")
+    public WebElement fourthAddedButton;
+
 }

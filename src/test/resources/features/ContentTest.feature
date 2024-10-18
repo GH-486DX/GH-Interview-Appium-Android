@@ -7,10 +7,12 @@ Feature: Verify Content in the Test App
     When User clicks the Assets CTA
     And User clicks the Read Asset CTA
     Then User can see the Read Asset screen
-    And User can see the raw test asset
+    And User can see the raw text asset
+    And the raw text asset contains "raw Asset"
 
   Scenario: Check that styled text appears
     When User clicks the Resources CTA
     And User clicks the Styled Text CTA
     Then User can see the Styled Text screen
     And User can see the styled text
+    And the styled text contains "bold-italic"

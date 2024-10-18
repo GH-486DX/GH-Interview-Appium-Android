@@ -26,14 +26,12 @@ public class AnimationDefinitions {
         Assert.assertTrue(objAnimation.getDefaultLayoutAnimationsPageTitle());
     }
 
-    @And("User is able to click the Add Button CTA")
-    public void user_is_able_to_click_the_add_button_cta() {
-        objAnimation.clickAddButtonCTA();
-    }
-
-    @Then("A new Button appears")
-    public void a_new_button_appears() {
-        Assert.assertTrue(objAnimation.getNewButton());
+    @And("User can add four additional buttons")
+    public void userCanAddAdditionalButtons() throws InterruptedException {
+        for (int i = 0; i < 4; i++) {
+            objAnimation.clickAddButtonCTA();
+        }
+        Assert.assertTrue(objAnimation.getFourthButton());
     }
 
 }
